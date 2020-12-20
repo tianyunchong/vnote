@@ -381,6 +381,7 @@ QString ConfigMgr::getApplicationFilePath()
 #if defined(Q_OS_Linux)
     // Check if it is from AppImage.
     auto appImageVar = QString::fromLocal8Bit(qgetenv("APPIMAGE"));
+    qInfo() << "appImageVar" << appImageVar;
     if (!appImageVar.isEmpty()) {
         return appImageVar;
     }
